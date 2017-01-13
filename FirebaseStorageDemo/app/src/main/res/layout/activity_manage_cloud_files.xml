@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_manage_cloud_files"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.busyweb.firebaselogindemo.ManageCloudFiles">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:padding="8dp"
+        android:layout_margin="2dp">
+
+        <ImageButton
+            android:id="@+id/imageButtonUpload"
+            android:layout_alignParentRight="false"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_cloud_upload"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/imageButtonRefresh"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <ImageButton
+            android:id="@+id/imageButtonRefresh"
+            android:layout_alignParentRight="false"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_action_refresh"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+        <TextView
+            android:text="MANAGE CLOUD FILES"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/darker_gray"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/layoutList"
+        android:layout_below="@+id/layoutHeader"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewFiles"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

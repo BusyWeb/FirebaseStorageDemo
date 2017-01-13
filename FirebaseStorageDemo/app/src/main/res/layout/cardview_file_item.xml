@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardViewFileItem">
+
+
+        <RelativeLayout
+            android:id="@+id/layoutCardViewCotent"
+            android:layout_width="match_parent"
+            android:background="@android:color/background_light"
+            android:padding="8dp"
+            android:layout_height="80dp">
+
+            <TextView
+                android:id="@+id/textViewFileName"
+                android:text="File Name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="16sp"
+                android:layout_alignParentTop="false"
+
+                android:layout_toStartOf="@+id/imageButtonDownload"
+                android:layout_marginLeft="4dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true" />
+
+            <TextView
+                android:id="@+id/textViewUploadDate"
+                android:text="upload date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:textColor="@color/common_google_signin_btn_text_light_default"
+                android:layout_alignLeft="@+id/textViewFileName"
+                android:layout_alignParentBottom="true"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDownload"
+                android:layout_alignParentRight="false"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_cloud_download"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/imageButtonDelete"
+                android:layout_marginRight="16dp"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <ImageButton
+                app:srcCompat="@drawable/ic_action_clear"
+                android:id="@+id/imageButtonDelete"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
